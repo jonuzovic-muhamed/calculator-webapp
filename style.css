@@ -6,7 +6,7 @@ button:hover{
     opacity: 0.8;
 }
 button:active{
-    transform: translateY(2px);
+    transform: translateY(0.15vw);
 }
 body {
     width: 100%;
@@ -20,8 +20,8 @@ body {
     padding: 2%;
     height: 60vh;
     width: 25%;
-    border: #222831 solid 8px;
-    border-radius: 5%;
+    border: #222831 solid 0.5vw;
+    border-radius: 1cap;
     background-color: #393e46;
 }
 #display{
@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    border: #222831 solid 8px;
+    border: #222831 solid 0.25vw;
     border-radius: 1cap;
     background-color: #f2f2f2;
     overflow: hidden;
@@ -64,7 +64,7 @@ body {
     column-gap: 1%;
 }
 .upper-button{
-    border: #222831 solid 4px;
+    border: #222831 solid 0.25vw;
     border-radius: 1cap;
     font-size: 1.5vw;
 }
@@ -75,14 +75,14 @@ body {
     background-color: #dc2f2f;
 }
 .number-button{
-    border: #222831 solid 4px;
+    border: #222831 solid 0.15vw;
     border-radius: 1cap;
     font-size: 1.5vw;
     background-color: #f2f2f2d5;
     color: #222831;
 }
 .operation-button{
-    border: #222831 solid 4px;
+    border: #222831 solid 0.15vw;
     border-radius: 1cap;
     font-size: 1.5vw;
     background-color: #f96d00;
