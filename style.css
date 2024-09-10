@@ -34,14 +34,13 @@ body {
     border: #222831 solid 8px;
     border-radius: 1cap;
     background-color: #f2f2f2;
-    font-size: xx-large;
     overflow: hidden;
 }
 #operation-cache{
-    font-size: medium;
+    font-size: 1vw;
 }
 #current-operation{
-    font-size: xx-large;
+    font-size: 2vw;
 }
 #buttons-container{
     display: flex;
@@ -67,7 +66,7 @@ body {
 .upper-button{
     border: #222831 solid 4px;
     border-radius: 1cap;
-    font-size: x-large;
+    font-size: 1.5vw;
 }
 #clean-button{
     background-color: #0881d2;
@@ -78,14 +77,14 @@ body {
 .number-button{
     border: #222831 solid 4px;
     border-radius: 1cap;
-    font-size: x-large;
+    font-size: 1.5vw;
     background-color: #f2f2f2d5;
     color: #222831;
 }
 .operation-button{
     border: #222831 solid 4px;
     border-radius: 1cap;
-    font-size: x-large;
+    font-size: 1.5vw;
     background-color: #f96d00;
     color: #f2f2f2;
 }
