@@ -88,25 +88,8 @@ function handlePoint() {
     }
 }
 
-upperButtonsMenu.addEventListener("click", (event) => {
-    let target = event.target;
-
-    switch(target.id) {
-        case 'clean-button':
-            cleanRestart();
-            break;
-        case 'delete-button':
-            deleteLastInput();
-            break;
-        default:
-            break;
-    }
-});
-
-lowerButtonsMenu.addEventListener('click', (event) => {
-    let target = event.target;
-
-    switch(target.textContent) {
+function handleLowerButtonsMenu (event) {
+    switch(event) {
         case '0':
             appendToCurrentOperationDisplay('0');
             break;
@@ -148,6 +131,8 @@ lowerButtonsMenu.addEventListener('click', (event) => {
         case '-':
             handleSubtraction();
             break;
+        case '*':
+        case 'x':
         case 'X':
             operation = 'X';
             firstOperationNumber = parseFloat(currentOperationDisplay.textContent);
@@ -159,9 +144,33 @@ lowerButtonsMenu.addEventListener('click', (event) => {
             setCacheOperationDisplay(currentOperationDisplay.textContent + ' /');
             break;
         case '=':
+        case 'Enter':
             handleSum();
             break;
         default:
             break;
     }
+}
+
+upperButtonsMenu.addEventListener("click", (event) => {
+    let target = event.target;
+    switch(target.id) {
+        case 'clean-button':
+            cleanRestart();
+            break;
+        case 'delete-button':
+            deleteLastInput();
+            break;
+        default:
+            break;
+    }
+});
+
+lowerButtonsMenu.addEventListener('click', (event) => {
+    let target = event.target.textContent;
+    handleLowerButtonsMenu(target);
+});
+
+document.addEventListener("keydown", (event) => {
+    handleLowerButtonsMenu(event.key);
 });
