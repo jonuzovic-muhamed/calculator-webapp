@@ -1,7 +1,7 @@
-let currentOperationDisplay = document.getElementById("current-operation");
-let cacheOperationDisplay = document.getElementById("operation-cache");
+let currentOperationDisplay = document.getElementById('current-operation');
+let cacheOperationDisplay = document.getElementById('operation-cache');
 let upperButtonsMenu = document.getElementById('upper-buttons');
-let lowerButtonsMenu = document.getElementById("lower-buttons");
+let lowerButtonsMenu = document.getElementById('lower-buttons');
 
 let firstOperationNumber;
 let secondOperationNumber;
@@ -88,7 +88,7 @@ function handlePoint() {
     }
 }
 
-function handleLowerButtonsMenu (event) {
+function handleLowerButtonsMenu(event) {
     switch(event) {
         case '0':
             appendToCurrentOperationDisplay('0');
@@ -121,6 +121,7 @@ function handleLowerButtonsMenu (event) {
             appendToCurrentOperationDisplay('9');
             break;
         case '.':
+        case ',':
             handlePoint();
             break;
         case '+':
@@ -152,18 +153,29 @@ function handleLowerButtonsMenu (event) {
     }
 }
 
-upperButtonsMenu.addEventListener("click", (event) => {
-    let target = event.target;
-    switch(target.id) {
+function handleUpperButtonsMenu(event) {
+    switch(event) {
+        case 'Delete':
         case 'clean-button':
             cleanRestart();
             break;
+        case 'Backspace':
         case 'delete-button':
             deleteLastInput();
             break;
         default:
             break;
     }
+}
+
+upperButtonsMenu.addEventListener('click', (event) => {
+    let target = event.target.id;
+    handleUpperButtonsMenu(target);
+});
+
+document.addEventListener('keydown', (event) => {
+    let pressedKey = event.key;
+    handleUpperButtonsMenu(pressedKey);
 });
 
 lowerButtonsMenu.addEventListener('click', (event) => {
@@ -171,6 +183,6 @@ lowerButtonsMenu.addEventListener('click', (event) => {
     handleLowerButtonsMenu(target);
 });
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener('keydown', (event) => {
     handleLowerButtonsMenu(event.key);
 });
