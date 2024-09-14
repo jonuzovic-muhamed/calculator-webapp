@@ -2,20 +2,34 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 button:hover{
     opacity: 0.8;
 }
+
 button:active{
     transform: translateY(0.15vw);
 }
+
 body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
 }
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #calculator-body{
     padding: 2%;
     height: 60vh;
@@ -24,6 +38,7 @@ body {
     border-radius: 1cap;
     background-color: #393e46;
 }
+
 #display{
     padding: 3%;
     height: 20%;
@@ -36,17 +51,21 @@ body {
     background-color: #ffffff;
     overflow: hidden;
 }
+
 #operation-cache{
     font-size: 1vw;
 }
+
 #current-operation{
     font-size: 2vw;
 }
+
 #buttons-container{
     display: flex;
     flex-direction: column;
     height: 80%;
 }
+
 #upper-buttons{
     width: 100%;
     height: 20%;
@@ -55,6 +74,7 @@ body {
     grid-template-columns: 1fr 1fr;
     column-gap: 1%;
 }
+
 #lower-buttons{
     width: 100%;
     height: 80%;
@@ -63,17 +83,21 @@ body {
     row-gap: 1%;
     column-gap: 1%;
 }
+
 .upper-button{
     border: #222831 solid 0.25vw;
     border-radius: 1cap;
     font-size: 1.5vw;
 }
+
 #clean-button{
     background-color: #0881d2;
 }
+
 #delete-button{
     background-color: #dc2f2f;
 }
+
 .number-button{
     border: #222831 solid 0.15vw;
     border-radius: 1cap;
@@ -81,6 +105,7 @@ body {
     background-color: #f2f2f2;
     color: #222831;
 }
+
 .operation-button{
     border: #222831 solid 0.15vw;
     border-radius: 1cap;
@@ -88,15 +113,19 @@ body {
     background-color: #f96d00;
     color: #f2f2f2;
 }
+
 #division-button{
     background-color: #6e81b5;
 }
+
 #multiplication-button{
     background-color: #78a713;
 }
+
 #addition-button{
     background-color: #076c9e;
 }
+
 #subtraction-button{
     background-color: #efcc31;
 }
