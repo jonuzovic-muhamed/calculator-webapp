@@ -1,7 +1,7 @@
 let currentOperationDisplay = document.getElementById('current-operation');
 let cacheOperationDisplay = document.getElementById('operation-cache');
-let upperButtonsMenu = document.getElementById('upper-buttons');
-let lowerButtonsMenu = document.getElementById('lower-buttons');
+let upperButtonsMenu = document.getElementById('upper-buttons-container');
+let lowerButtonsMenu = document.getElementById('lower-buttons-container');
 
 let firstOperationNumber;
 let secondOperationNumber;
